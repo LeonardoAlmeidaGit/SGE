@@ -114,6 +114,26 @@ sge/ ├── app/ # Configurações principais, settings, urls e métricas ├
 
 ## 📸 Screenshots
 
+**Dashboard**
+![Dashboard](screenshots/dashboard.png)
+
+**Produtos**
+![Produtos](screenshots/products.png)
+
+**Entradas**
+![Entradas](screenshots/inflows.png)
+
+**Saídas**
+![Saídas](screenshots/outflows.png)
+
+**Marcas**
+![Marcas](screenshots/brands.png)
+
+**Categorias**
+![Categorias](screenshots/categories.png)
+
+**Fornecedores**
+![Fornecedores](screenshots/suppliers.png)
 
 ## 👨‍💻 Autor
 
