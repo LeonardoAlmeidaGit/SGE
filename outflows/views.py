@@ -3,10 +3,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DetailView
 from app import metrics
+from app.mixins import AdminContextMixin
 from . import models, forms, serializers
 
 
-class OutflowListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class OutflowListView(AdminContextMixin, LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = models.Outflow
     template_name = 'outflow_list.html'
     context_object_name = 'outflows'

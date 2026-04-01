@@ -4,11 +4,12 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 from . import models, forms, serializers
 from app import metrics
+from app.mixins import AdminContextMixin
 from categories.models import Category
 from brands.models import Brand
 
 
-class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
+class ProductListView(AdminContextMixin, LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = models.Product
     template_name = 'product_list.html'
     context_object_name = 'products'
